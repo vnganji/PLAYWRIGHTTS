@@ -1,0 +1,22 @@
+import { defineConfig, devices } from '@playwright/test';
+
+const config=({
+  testDir: './tests',
+  timeout: 10*1000,
+  
+  expect:{
+     timeout: 40*1000,
+  },
+  
+  use: {
+    browserName: 'chromium',
+    screenshot: 'on',
+  trace: 'on',
+  headless: false
+    
+  },
+  reporter:'html',
+  
+
+});
+module.exports=config
